@@ -28,9 +28,6 @@ class SignUpActivity : AppCompatActivity() {
     private var mSectionsPagerAdapter: SectionsPagerAdapter? = null
 
 
-    private val SWITCHER = "android:switcher:${container.id}:${mSectionsPagerAdapter?.getItemId(0)}"
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
@@ -75,7 +72,7 @@ class SignUpActivity : AppCompatActivity() {
             data.let {
                 val photos = data?.getStringArrayListExtra(PhotoPicker.KEY_SELECTED_PHOTOS)
                 val fragment = supportFragmentManager
-                        .findFragmentByTag(SWITCHER)
+                        .findFragmentByTag("android:switcher:${container.id}:${mSectionsPagerAdapter?.getItemId(0)}")
                         as SignUpPersonFragment
 
                 fragment.updatePhoto(photos?.get(0))
