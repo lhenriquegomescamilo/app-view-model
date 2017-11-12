@@ -1,0 +1,21 @@
+package viewmodel.app.lcamilo.app_view_model
+
+
+import android.content.Intent
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import android.view.View
+import viewmodel.app.lcamilo.app_view_model.signupcomponent.SignUpActivity
+
+class LoginActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_login)
+    }
+
+    fun callSignUp(view: View) {
+        startActivity(Intent(this, SignUpActivity::class.java))
+
+    }
+
+}

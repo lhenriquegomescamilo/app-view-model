@@ -1,0 +1,99 @@
+<!--
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:conteviewmodel.app.lcamilo.app_view_model.signupcomponent.SignUpActivityvity$PlaceholderFragment">
+
+    <TextView
+        android:id="@+id/section_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+</android.support.constraint.ConstraintLayout>
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="57dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_profile_image"
+            app:riv_border_width="0dip"
+            app:riv_corner_radius="30dip"
+            app:riv_mutate_background="false"
+            app:riv_oval="true"
+            app:riv_tile_mode="clamp" />
+
+        <TextView
+            android:layout_width="76dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_profile"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="36dp"
+            android:layout_toEndOf="@+id/iv_profile"
+            android:layout_toRightOf="@+id/iv_profile"
+            android:text="@string/informe_imagem_perfil"
+            android:textSize="13sp"
+            android:textStyle="italic">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_profile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="75dp"
+            android:background="@drawable/field_radius"
+            android:hint="@string/nome_completo"
+            android:inputType="textPersonName"
+            android:padding="8dp"
+            android:paddingLeft="16dp"
+            android:paddingStart="16dp">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/et_profession"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/field_radius"
+            android:hint="@string/profissao"
+            android:inputType="text"
+            android:padding="8dp"
+            android:paddingLeft="16dp"
+            android:paddingStart="16dp" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
